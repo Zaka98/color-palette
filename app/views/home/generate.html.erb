@@ -19,6 +19,7 @@
 			};
 			let palette = colorPalettes.children[i]
 			palette.style.backgroundColor =  "#"+hexValues;
+			palette.innerHTML = "#"+hexValues;
 			hexValues = "";
 		}	
 	};
@@ -26,6 +27,10 @@
 document.addEventListener('keydown', event => {
   if (event.code === 'Space') {
     generateColor()
+    event.preventDefault();
   }
+
 })
+
+generateColor()
 </script>
