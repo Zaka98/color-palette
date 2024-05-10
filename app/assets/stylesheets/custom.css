@@ -4,3 +4,9 @@ body {
   background-image: linear-gradient(to bottom right, #082589f0 , #9191c3); 
 
 }
+
+
+.logo {
+	width: 210px;
+	height: auto;
+}
