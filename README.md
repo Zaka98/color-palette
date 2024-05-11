@@ -1,9 +1,9 @@
 This is a Tech challenge by Rajat Talesra
-challenge link: https://www.youtube.com/watch?v=66qDihJzlIw&t=4s
-His Youtube Channel link :  https://www.youtube.com/@rajattalesra
+
+* challenge link: https://www.youtube.com/watch?v=66qDihJzlIw&t=4s
+* His Youtube Channel link :  https://www.youtube.com/@rajattalesra
 
 This is a Simple Color palette generator 
-
 
 Tech Stack I have used:
 
