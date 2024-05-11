@@ -1,4 +1,6 @@
-
+<div class="instruction">
+    Press the spacebar to generate color palettes!
+</div>
 <div class="flex flex-row" id="colorPalettes">
 	<div class="h-screen w-1/5 flex items-center justify-center"></div>
 	<div class="h-screen w-1/5 flex items-center justify-center"></div>
@@ -19,18 +21,29 @@
 			};
 			let palette = colorPalettes.children[i]
 			palette.style.backgroundColor =  "#"+hexValues;
-			palette.innerHTML = `<span class="bg-indigo-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-500">${"#"+hexValues}</span>`;
+			palette.innerHTML = `<span class=" shadow-lg bg-indigo-100 text-indigo-800 text-lg font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-indigo-400 border border-indigo-400 palette-badge" onclick="copyToClipboard(this)" title="Click to copy" >${"#"+hexValues}</span>`;
+		
 			hexValues = "";
 		}	
 	};
 
-document.addEventListener('keydown', event => {
-  if (event.code === 'Space') {
-    generateColor()
-    event.preventDefault();
+
+  function copyToClipboard(element) {
+    const text = element.innerText;
+    navigator.clipboard.writeText(text);
+    element.innerText = 'Copied!';
+    setTimeout(() => {
+      element.innerText = text;
+    }, 1000);
   }
 
-})
+	document.addEventListener('keydown', event => {
+	  if (event.code === 'Space') {
+	    generateColor()
+	    event.preventDefault();
+	  }
 
-generateColor()
+	})
+
+	generateColor()
 </script>
